@@ -2,9 +2,9 @@ public class Stream_MethodReference {
 	public List<Object> orderState(String state) {
 	    List<OrderRecord> orders = getOrdersByState(state);
 	     List<Object> totalDetails = orders.stream()                            //Stream<OrderRecord>   
-	                                          .map(OrderRecord::getOrderId)     //Stream<String>         //option 3: Reference to an instance method of an arbitrary object of a specific type 
-	                                          .map(this::getDetailsFromDB)      //Stream<List<Objects>> //option 2: Reference to an instance method of a particular object
-	                                          .flatMap(List::stream)            //Stream<Objects>       //option 3: Reference to an instance method of an arbitrary object of a specific type
+	                                          .map(OrderRecord::getOrderId)     //Stream<String> (Function<T, R>)        //option 3: Reference to an instance method of an arbitrary object of a specific type 
+	                                          .map(this::getDetailsFromDB)      //Stream<List<Objects>> (Function<T, R>)  //option 2: Reference to an instance method of a particular object
+	                                          .flatMap(List::stream)            //Stream<Objects>    (Function<T, R>)    //option 3: Reference to an instance method of an arbitrary object of a specific type
 	                                          .toList();                        //List<Objects>
 	     return totalDetails;
 	     
