@@ -11,6 +11,8 @@ objectReference::instanceMethod
 Option 3 — Reference to an instance method of an arbitrary object of a specific type
 
 ClassName::instanceMethod
+Example: CompletableFuture::join
+Description: join() is instance method in CompletableFuture Class type.
 
 Option 4 — Reference to a constructor
 
