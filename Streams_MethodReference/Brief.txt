@@ -1,0 +1,17 @@
+Method Reference:
+
+Option 1 — Reference to a static method
+
+ClassName::staticMethod
+
+Option 2 — Reference to an instance method of a particular object
+
+objectReference::instanceMethod
+
+Option 3 — Reference to an instance method of an arbitrary object of a specific type
+
+ClassName::instanceMethod
+
+Option 4 — Reference to a constructor
+
+ClassName::new
