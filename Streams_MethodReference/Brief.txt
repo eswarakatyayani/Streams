@@ -7,6 +7,7 @@ ClassName::staticMethod
 Option 2 — Reference to an instance method of a particular object
 
 objectReference::instanceMethod
+Example: System.out::println
 
 Option 3 — Reference to an instance method of an arbitrary object of a specific type
 
